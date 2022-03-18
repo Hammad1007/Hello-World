@@ -1,4 +1,5 @@
 ; Task 1
+; Printing hello World in Assembly Language
 ;---------------------------------------------------
 
 [org 0x0100] 
@@ -30,7 +31,9 @@ start:
    
    mov ah, 0
    int 0x16
-   call clrscr
+   call clrscr  ; function to clear any content on screen
+   
+   ; Printing once 
    mov ah, 0x13 ; service 13 - print string 
    mov al, 1 ; subservice 01 – update cursor 
    mov bh, 0 ; output on page 0 
